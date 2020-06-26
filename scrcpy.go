@@ -43,7 +43,7 @@ func (scrcpy *Scrcpy) Start(devices ...string) error {
 func (scrcpy *Scrcpy) runCommand(args ...string) (string, error) {
 	var command string
 	if scrcpy.Path != "" {
-		path.Join(scrcpy.Path, "scrcpy")
+		command = path.Join(scrcpy.Path, "scrcpy")
 	} else {
 		command = "scrcpy"
 	}

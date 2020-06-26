@@ -91,6 +91,7 @@ func startScrcpyWithDevice(device string) error {
 	}
 
 	// Start scrcpy
+	fmt.Println("Scrcpy is running...")
 	err = scrcpy.Start(fmt.Sprintf("%s:5555", ip))
 	if err != nil {
 		return err

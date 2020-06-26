@@ -123,7 +123,7 @@ func (adb *Adb) GetWlanIP(devices ...string) (string, error) {
 func (adb *Adb) runCommand(args ...string) (string, error) {
 	var command string
 	if adb.Path != "" {
-		path.Join(adb.Path, "adb")
+		command = path.Join(adb.Path, "adb")
 	} else {
 		command = "adb"
 	}
